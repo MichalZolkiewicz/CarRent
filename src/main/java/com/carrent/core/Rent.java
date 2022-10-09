@@ -21,10 +21,12 @@ public class Rent {
     @Column(name = "ID")
     private Long id;
 
-    @Column(name = "USER_ID")
+    @OneToMany
+    @JoinColumn(name = "USER_ID")
     private User userId;
 
-    @Column(name = "CAR_ID")
+    @OneToMany
+    @JoinColumn(name = "CAR_ID")
     private Car carId;
 
     @Column(name = "START_DATE")
