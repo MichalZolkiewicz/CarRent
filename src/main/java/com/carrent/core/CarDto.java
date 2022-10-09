@@ -8,5 +8,5 @@ public class CarDto {
 
     private final Long id;
     private final Long price;
-    private final String rentStatus;
+    private final boolean isRented;
 }

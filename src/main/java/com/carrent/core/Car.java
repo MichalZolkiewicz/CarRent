@@ -27,11 +27,11 @@ public class Car {
     private String model;
 
     @Column(name = "RENT_STATUS")
-    private String rentStatus;
+    private boolean isRented;
 
-    public Car(Long id, Long price, String rentStatus) {
+    public Car(Long id, Long price, boolean isRented) {
         this.id = id;
         this.price = price;
-        this.rentStatus = rentStatus;
+        this.isRented = isRented;
     }
 }
