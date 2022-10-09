@@ -18,7 +18,7 @@ public class CarController {
     }
 
     @PutMapping("/car/{carId}")
-    public Long updateCarRentStatus(@PathVariable Long carId, @RequestParam String rentStatus) {
+    public Long updateCarRentStatus(@PathVariable Long carId, @RequestParam boolean rentStatus) {
         return carFacade.updateCarRentStatus(carId, rentStatus);
     }
 
