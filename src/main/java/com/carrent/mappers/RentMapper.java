@@ -4,9 +4,6 @@ import com.carrent.core.Rent;
 import com.carrent.core.RentDto;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 @Service
 public class RentMapper {
 
@@ -22,11 +19,5 @@ public class RentMapper {
                 .startDate(rent.getStartDate())
                 .endDate(rent.getEndDate())
                 .build();
-    }
-
-    public List<RentDto> mapToRentDtoList(List<Rent> rentList) {
-        return rentList.stream()
-                .map(this::mapToRentDto)
-                .collect(Collectors.toList());
     }
 }

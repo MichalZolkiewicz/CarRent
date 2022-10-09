@@ -4,9 +4,6 @@ import com.carrent.core.User;
 import com.carrent.core.UserDto;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 @Service
 public class UserMapper {
 
@@ -21,11 +18,4 @@ public class UserMapper {
                 .lastName(user.getLastName())
                 .build();
     }
-
-    public List<UserDto> mapToUserDtoList(List<User> userList) {
-        return userList.stream()
-                .map(this::mapToUserDto)
-                .collect(Collectors.toList());
-    }
-
 }

@@ -21,10 +21,4 @@ public class CarMapper {
                 .rentStatus(car.getRentStatus())
                 .build();
     }
-
-    public List<CarDto> mapToCarDtoList(List<Car> carList) {
-        return carList.stream()
-                .map(this::mapToCarDto)
-                .collect(Collectors.toList());
-    }
 }
