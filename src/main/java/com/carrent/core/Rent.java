@@ -21,13 +21,13 @@ public class Rent {
     @Column(name = "ID")
     private Long id;
 
-    @OneToMany
+    @OneToOne
     @JoinColumn(name = "USER_ID")
-    private User userId;
+    private User user;
 
-    @OneToMany
+    @OneToOne
     @JoinColumn(name = "CAR_ID")
-    private Car carId;
+    private Car car;
 
     @Column(name = "START_DATE")
     private LocalDate startDate;
