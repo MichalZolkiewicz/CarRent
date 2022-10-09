@@ -17,7 +17,7 @@ public class CarController {
         return carFacade.createCar(carDto);
     }
 
-    @PutMapping("/car/{carId}")
+    @PutMapping("/car/status/{carId}")
     public Long updateCarRentStatus(@PathVariable Long carId, @RequestParam boolean rentStatus) {
         return carFacade.updateCarRentStatus(carId, rentStatus);
     }
