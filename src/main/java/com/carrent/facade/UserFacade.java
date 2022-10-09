@@ -19,4 +19,8 @@ public class UserFacade {
         userRepository.save(user);
         return user.getId();
     }
+
+    public void deleteUser(Long userId) {
+        userRepository.deleteById(userId);
+    }
 }
