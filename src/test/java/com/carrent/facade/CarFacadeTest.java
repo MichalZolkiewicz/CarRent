@@ -12,10 +12,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CarFacadeTest {
 
     @Autowired
-    CarRepository carRepository;
+    private CarRepository carRepository;
 
     @Autowired
-    CarFacade carFacade;
+    private CarFacade carFacade;
 
     @Test
     public void testCreateCar() {

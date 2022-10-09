@@ -12,10 +12,10 @@ import static org.junit.jupiter.api.Assertions.*;
 public class UserFacadeTest {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Autowired
-    UserFacade userFacade;
+    private UserFacade userFacade;
 
     @Test
     public void testCreateUser() {
