@@ -15,8 +15,8 @@ public class RentController {
     private final RentFacade rentFacade;
 
     @PostMapping("/rent")
-    public Long createRent (@RequestBody RentDto rentDto) {
-        return rentFacade.createRent(rentDto);
+    public void createRent (@RequestBody RentDto rentDto) {
+        rentFacade.createRent(rentDto);
     }
 
     @PutMapping("/rent/{rentId}")
