@@ -10,8 +10,8 @@ import java.time.LocalDate;
 public class RentDto {
 
     private final Long id;
-    private final User userId;
-    private final Car carId;
+    private final User user;
+    private final Car car;
     private final LocalDate startDate;
     private final LocalDate endDate;
 

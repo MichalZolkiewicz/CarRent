@@ -8,14 +8,14 @@ import org.springframework.stereotype.Service;
 public class RentMapper {
 
     public Rent mapToRent(RentDto rentDto) {
-        return new Rent(rentDto.getId(), rentDto.getUserId(), rentDto.getCarId(), rentDto.getStartDate(), rentDto.getEndDate());
+        return new Rent(rentDto.getId(), rentDto.getUser(), rentDto.getCar(), rentDto.getStartDate(), rentDto.getEndDate());
     }
 
     public RentDto mapToRentDto(Rent rent) {
         return RentDto.builder()
                 .id(rent.getId())
-                .userId(rent.getUser())
-                .carId(rent.getCar())
+                .user(rent.getUser())
+                .car(rent.getCar())
                 .startDate(rent.getStartDate())
                 .endDate(rent.getEndDate())
                 .build();
