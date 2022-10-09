@@ -21,7 +21,7 @@ public class RentFacade {
 
     public void createRent(RentDto rentDto) {
         Rent rent = rentMapper.mapToRent(rentDto);
-        Car car = rent.getCarId();
+        Car car = rent.getCar();
 
         if(!car.isRented()) {
             car.setRented(true);
@@ -35,6 +35,6 @@ public class RentFacade {
     public void finishRent(final long rentId, LocalDate endDate) {
         Rent rent = rentRepository.findById(rentId);
         rent.setEndDate(endDate);
-        rent.getCarId().setRented(false);
+        rent.getCar().setRented(false);
     }
 }

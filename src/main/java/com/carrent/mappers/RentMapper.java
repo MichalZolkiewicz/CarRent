@@ -14,8 +14,8 @@ public class RentMapper {
     public RentDto mapToRentDto(Rent rent) {
         return RentDto.builder()
                 .id(rent.getId())
-                .userId(rent.getUserId())
-                .carId(rent.getCarId())
+                .userId(rent.getUser())
+                .carId(rent.getCar())
                 .startDate(rent.getStartDate())
                 .endDate(rent.getEndDate())
                 .build();
