@@ -20,9 +20,9 @@ public class CarFacade {
         return car.getId();
     }
 
-    public Long updateCarRentStatus(final long carId, String rentStatus) {
+    public Long updateCarRentStatus(final long carId, boolean rentStatus) {
         Car car = carRepository.findById(carId);
-        car.setRentStatus(rentStatus);
+        car.setRented(rentStatus);
 
         Car newCarRentStatus = carRepository.save(car);
         carMapper.mapToCarDto(newCarRentStatus);
