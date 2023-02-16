@@ -47,8 +47,8 @@ public class RentFacadeTest {
 
         assertEquals(expectedRentStatus, carRentStatus);
 
+        rentRepository.deleteAll();
         userRepository.deleteById(user.getId());
         carRepository.deleteById(car.getId());
-        rentRepository.deleteAll();
     }
 }
